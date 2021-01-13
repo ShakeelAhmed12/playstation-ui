@@ -7,9 +7,28 @@ import { BackgroundContext } from './context/background-context';
 
 const StyleGameNav = styled.section(({ gameTitle }) => `
   position: relative;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
   white-space: nowrap;
   overflow-x: scroll;
+
+  ::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #9c9c9c61;
+    border-radius: 16px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 16px;
+    background: #006bc7;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #005196;
+  }
 
   .game{
     background: linear-gradient(60deg, rgba(16,25,37,1) 0%, rgba(0,0,0,1) 50%, rgba(16,25,37,1) 100%);
@@ -91,7 +110,7 @@ const GameNav = () => {
 
   return(
     <StyleGameNav gameTitle={activeGame}>
-        <div className={`game ${activeGame === 'explore' ? 'active explore' : ''}`} onClick={() => setActiveGame('explore')}>
+        <div className={`game explore ${activeGame === 'explore' ? 'active' : ''}`} onClick={() => setActiveGame('explore')}>
           <LocationIcon />
         </div>
         {GAMES.map((game, i) => (

@@ -13,7 +13,7 @@ const StyledVideoTrailers = styled.section`
   min-height: 200px;
 
   ::-webkit-scrollbar {
-    height: 15px;
+    height: 8px;
   }
 
   ::-webkit-scrollbar-track {

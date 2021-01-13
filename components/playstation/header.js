@@ -3,12 +3,21 @@ import styled from 'styled-components';
 import SearchIcon from '../ui/icons/search';
 import SettingsIcon from '../ui/icons/settings';
 import Image from 'next/image';
+import BurgerMenu from './nav/burger-menu';
 
 const StyledHeader = styled.header`
   display: flex;
   width: 100%;
   justify-content: space-between;
-  padding: 2.5rem;
+  padding: 2.5rem 1.5rem;
+
+  @media (min-width: 768px){
+    padding: 2.5rem 2rem;
+  }
+
+  @media (min-width: 992px){
+    padding: 2.5rem;
+  }
 `;
 
 const StyledNav = styled.section`
@@ -55,20 +64,29 @@ const StyledNav = styled.section`
   }
 `;
 
-
 const Header = () => {
     const [time, setTime] = useState('');
+    const [activeDeviceMedia, setDeviceMedia] = useState('desktop');
 
     useEffect(() => {
         const date = new Date();
         const hours = date.getHours() < 10 ? `0${date.getHours()}` : date.getHours();
         const minutes = date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes();
         setTime(`${hours}:${minutes}`);
+
+        if(window.matchMedia('(min-width: 992px)').matches){
+          setDeviceMedia('desktop');
+        }else{
+          setDeviceMedia('mobile');
+        }
+
     }, []);
 
     return(
     <StyledHeader>
-        <StyledNav>
+        {activeDeviceMedia === 'desktop' ? (
+          <>
+          <StyledNav>
           <a href="#" className="active">
             Games
           </a>
@@ -84,12 +102,23 @@ const Header = () => {
             <SettingsIcon />
           </span>
           <span className="profile">
-            <Image src="/playstation/profile.jpg" alt="User profile avatar" layout="responsive" width={200} height={200} />
+            <Image src="/playstation/profile.jpg" alt="User profile avatar" layout="responsive" width={50} height={50} />
           </span>
           <span className="time">
             {time}
           </span>
         </StyledNav>
+          </>
+        ):(
+          <>
+            <StyledNav className="settings">
+            <span className="time">
+              {time}
+            </span>
+            </StyledNav>
+            <BurgerMenu />
+          </>
+        )}
       </StyledHeader>
     )
 };
