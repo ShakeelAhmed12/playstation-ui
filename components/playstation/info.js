@@ -4,9 +4,7 @@ import { BackgroundContext } from './context/background-context';
 import GAMEINFO from '../../configuration/game-info';
 
 const StyledInfo = styled.section`
-  width: 50%;
   margin-bottom: 3rem;
-  min-height: 250px;
 
   .sub-title{
       font-size: 1.2rem;
@@ -22,14 +20,23 @@ const StyledInfo = styled.section`
   }
 
   p{
-    font-size: 2rem;
     font-weight: 300;
     color: #e6e6e6;
+    font-size: 1.25rem;
   }
 
   img{
     max-width: 300px;
     margin: 0 0 1rem;
+  }
+
+  @media (min-width: 1200px){
+    width: 50%;
+    min-height: 250px;
+
+    p{
+      font-size: 2rem;
+    }
   }
 `;
 

@@ -4,14 +4,18 @@ import { BackgroundContext } from './context/background-context';
 import BACKGROUNDS from '../../configuration/background';
 
 const StyledWrapper = styled.div(({ bgImage }) => `
+  position: relative;
   background: url('${bgImage}') no-repeat;
-  background-position: inherit;
+  background-position: center;
   background-size: cover;
   width: 100%;
   overflow-x: hidden;
   height: 100vh;
   transition: all 0.25s ease-in-out;
-    position: relative;
+
+  @media (min-width: 992px){
+    background-position: inherit;
+  }
 `);
 
 const BackgroundWrapper = ({ children }) => {

@@ -7,13 +7,13 @@ import { BackgroundContext } from './context/background-context';
 
 const StyleGameNav = styled.section(({ gameTitle }) => `
   position: relative;
-  display: flex;
-  margin-bottom: 10rem;
-  min-height: 150px;
+  padding-bottom: 2rem;
+  white-space: nowrap;
+  overflow-x: scroll;
 
   .game{
     background: linear-gradient(60deg, rgba(16,25,37,1) 0%, rgba(0,0,0,1) 50%, rgba(16,25,37,1) 100%);
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     width: 100px;
@@ -25,28 +25,62 @@ const StyleGameNav = styled.section(({ gameTitle }) => `
     border: 0px solid #576170;
     transition: all 0.15s ease-in-out;
 
+    &.explore{
+      position: relative;
+      top: -20px;
+    }
+
     &:hover{
       border: 2px solid #576170;
     }
+  }
 
-    &.active{
-      overflow: visible;
-      width: 150px;
-      height: 150px;
-      border: 2px solid #576170;
-      position: relative;
+  @media (min-width: 992px){
+    display: flex;
+    margin-bottom: 10rem;
+    padding: 0;
+    min-height: 150px;
+    overflow-x: visible;
+
+    .game{
+      background: linear-gradient(60deg, rgba(16,25,37,1) 0%, rgba(0,0,0,1) 50%, rgba(16,25,37,1) 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+      border-radius: 20%;
+      margin-right: 1rem;
+      cursor: pointer;
+      border: 0;
       transition: all 0.15s ease-in-out;
 
-      &::after{
-        content: '${gameTitle}';
-        position: absolute;
-        width: 130%;
-        bottom: 10px;
-        left: 160px;
-        color: white;
-        font-size: 1.5rem;
-        font-weight: 100;
-        text-transform: capitalize;
+      &.explore{
+        top: 0;
+      }
+
+      &.active{
+        overflow: visible;
+        width: 150px;
+        height: 150px;
+        border: 2px solid #576170;
+        position: relative;
+        transition: all 0.15s ease-in-out;
+      }
+
+      &.active{
+        &::after{
+          content: '${gameTitle}';
+          position: absolute;
+          width: 130%;
+          bottom: 10px;
+          left: 160px;
+          color: white;
+          font-size: 1.5rem;
+          font-weight: 100;
+          text-transform: capitalize;
+        }
       }
     }
   }
@@ -57,7 +91,7 @@ const GameNav = () => {
 
   return(
     <StyleGameNav gameTitle={activeGame}>
-        <div className={`game ${activeGame === 'explore' ? 'active' : ''}`} onClick={() => setActiveGame('explore')}>
+        <div className={`game ${activeGame === 'explore' ? 'active explore' : ''}`} onClick={() => setActiveGame('explore')}>
           <LocationIcon />
         </div>
         {GAMES.map((game, i) => (
