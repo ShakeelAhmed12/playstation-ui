@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { Modal, ModalHeader, ModalBody, Row, Col } from 'reactstrap';
+import { Modal, ModalHeader, ModalBody, Row, Col, Input } from 'reactstrap';
 import SearchIcon from '../ui/icons/search';
 import SettingsIcon from '../ui/icons/settings';
 import Image from 'next/image';
@@ -92,25 +92,29 @@ const StyledNav = styled.section`
 `;
 
 const StyledModal = styled(Modal)`
+  position: relative;
 
-    @media (min-width: 768px){
-      max-width: 90%;
-      margin: 0 auto;
+  @media (min-width: 768px){
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .modal-content{
+    background: linear-gradient(360deg, #1C1C1C 10%, #494949 360%);
+
+    .close{
+      color: white;
+      opacity: 1;
+      text-shadow: 0 0;
     }
-
-    .modal-content{
-      background: linear-gradient(360deg, #1C1C1C 10%, #494949 360%);
-
-      .close{
-        color: white;
-        opacity: 1;
-        text-shadow: 0 0;
-      }
-    }
+  }
 `;
 
 const StyledModalHeader = styled(ModalHeader)`
-    border-bottom: 0;
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  border-bottom: 0;
 `;
 
 const StyledModalBody = styled(ModalBody)`
@@ -125,6 +129,25 @@ const StyledModalBody = styled(ModalBody)`
       font-size: 1.5rem;
       margin: 1.5rem 0;
     }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+  
+    ::-webkit-scrollbar-track {
+      background: #38383861;
+      border-radius: 16px;
+    }
+  
+    ::-webkit-scrollbar-thumb {
+      border-radius: 16px;
+      background: #423f3f;
+
+    }
+  
+    ::-webkit-scrollbar-thumb:hover {
+      background: #5a5a5a;
+    }
 `;
 
 const GameCard = styled.div`
@@ -135,6 +158,7 @@ const GameCard = styled.div`
 
     img{
       height: 100%;
+      max-width: 100%;
       object-fit: cover;
     }
 `;
@@ -155,13 +179,18 @@ const GameCardFooter = styled.div`
       color: white;
       text-decoration: none;
     }
+
+    p{
+      font-size: 0.875rem;
+      margin: 0;
+    }
 `;
 
 const Header = () => {
     const [time, setTime] = useState('');
     const [activeDeviceMedia, setDeviceMedia] = useState('desktop');
     const [searchModal, setSearchModal] = useState(false);
-    const [gameData, setGameData] = useState('');
+    const [gameData, setGameData] = useState([]);
 
     const revealSearch = () => setSearchModal(!searchModal);
 
@@ -237,6 +266,13 @@ const Header = () => {
       {searchModal && (
           <StyledModal isOpen={searchModal} toggle={revealSearch} centered>
             <StyledModalHeader toggle={revealSearch} />
+            <div className="mt-3 pl-3 pr-5 mr-5 pb-3">
+              <Row>
+                <Col xs="12">
+                  <Input type="email" placeholder="Search for game..." onKeyDown={(e) => fetchFromApi(e.currentTarget.value)} />
+                </Col>
+              </Row>
+            </div>
             <StyledModalBody>
               <Row>
                 <Col xs="12">
@@ -244,8 +280,8 @@ const Header = () => {
                     Trending
                   </p>
                 </Col>
-              {gameData && gameData.map((game, i) => (
-                <Col lg="3" md="6" xs="12">
+              {gameData.length > 0 ? gameData.map((game, i) => (
+                <Col lg="3" md="6" xs="12" key={i}>
                   <GameCard>
                     <img src={game.background_image} loading="lazy" alt={game.name} />
                     <GameCardFooter>
@@ -253,15 +289,19 @@ const Header = () => {
                         {game.name}
                       </h5>
                       <div className="d-flex justify-content-between align-items-center">
-                        {/* <a href="#" target="_blank">
-                          Visit store
-                        </a> */}
+                        <p>Release Date: {game.released}</p>
                         <ControllerIcon />
                       </div>
                     </GameCardFooter>
                   </GameCard>
                 </Col>
-              ))}
+              )):(
+                <Col xs="12">
+                  <p className="text-center">
+                    Couldn't find any games
+                  </p>
+                </Col>
+              )}
               </Row>
             </StyledModalBody>
           </StyledModal>
