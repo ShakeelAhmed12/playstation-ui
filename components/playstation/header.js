@@ -209,7 +209,7 @@ const Header = () => {
     }, []);
 
     async function fetchFromApi (query) {
-      fetch(`https://api.rawg.io/api/games?key=${process.env.NEXT_RAWG_KEY}&platforms=187,18&parent_platforms=2${query && `&search=${query}`}`, {
+      fetch(`https://api.rawg.io/api/games?key=${process.env.NEXT_PUBLIC_RAWG_KEY}&platforms=187,18&parent_platforms=2${query && `&search=${query}`}`, {
           method: 'GET',
           headers: {
               'Content-Type': 'application/json'
