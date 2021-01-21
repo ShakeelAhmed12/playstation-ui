@@ -17,18 +17,20 @@ const StyledVideoTrailers = styled.section`
   }
 
   ::-webkit-scrollbar-track {
-    background: #9c9c9c61;
+    background: #38383861;
     border-radius: 16px;
   }
 
   ::-webkit-scrollbar-thumb {
     border-radius: 16px;
-    background: #006bc7;
+    background: #423f3f;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #005196;
+    background: #5a5a5a;
   }
+
+  scroll-snap-align: center;
 `;
 
 const VideoTrailers = () => {

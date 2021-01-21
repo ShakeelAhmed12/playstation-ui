@@ -108,6 +108,13 @@ const StyledModal = styled(Modal)`
       text-shadow: 0 0;
     }
   }
+
+  input{
+    background: transparent;
+    color: white;
+    border: 1px solid #404040;
+    border-radius: 6px;
+  }
 `;
 
 const StyledModalHeader = styled(ModalHeader)`
@@ -142,7 +149,6 @@ const StyledModalBody = styled(ModalBody)`
     ::-webkit-scrollbar-thumb {
       border-radius: 16px;
       background: #423f3f;
-
     }
   
     ::-webkit-scrollbar-thumb:hover {
@@ -269,7 +275,7 @@ const Header = () => {
             <div className="mt-3 pl-3 pr-5 mr-5 pb-3">
               <Row>
                 <Col xs="12">
-                  <Input type="email" placeholder="Search for game..." onKeyDown={(e) => fetchFromApi(e.currentTarget.value)} />
+                  <Input type="email" placeholder="Search for game..." onKeyPress={(e) => fetchFromApi(e.currentTarget.value)} />
                 </Col>
               </Row>
             </div>
