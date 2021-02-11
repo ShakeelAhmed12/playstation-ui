@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import GAMES from '../../configuration/games';
 import GameItem from './game-item';
 import LocationIcon from '../ui/icons/location';
-import { BackgroundContext } from './context/background-context';
+import { BackgroundContext } from './context/game-background';
 
 const StyleGameNav = styled.section(({ gameTitle }) => `
   position: relative;
@@ -52,7 +52,7 @@ const StyleGameNav = styled.section(({ gameTitle }) => `
 
   @media (min-width: 992px){
     display: flex;
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
     padding: 0;
     min-height: 150px;
     overflow-x: visible;
@@ -106,7 +106,7 @@ const GameNav = () => {
 
   return(
     <StyleGameNav gameTitle={activeGame}>
-        <div className={`game explore ${activeGame === 'explore' ? 'active' : ''}`} onClick={() => setActiveGame('explore')}>
+        <div className={`game ${activeGame === 'explore' ? 'active' : ''}`} onClick={() => setActiveGame('explore')}>
           <LocationIcon />
         </div>
         {GAMES.map((game, i) => (

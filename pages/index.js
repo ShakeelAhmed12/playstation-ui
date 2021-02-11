@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { BackgroundProvider } from '../components/playstation/context/background-context';
+import { GameBackground } from '../components/playstation/context/game-background';
 import BackgroundWrapper from '../components/playstation/background';
 import Header from '../components/playstation/header';
 import GameNav from '../components/playstation/game-nav';
@@ -13,7 +13,7 @@ const StyledContainer = styled.div`
 
 export default function Home() {
   return (
-    <BackgroundProvider>
+    <GameBackground>
       <BackgroundWrapper>
         <Header />
         <StyledContainer>
@@ -22,6 +22,6 @@ export default function Home() {
           <VideoTrailers />
         </StyledContainer>
       </BackgroundWrapper>
-    </BackgroundProvider>
+    </GameBackground>
   )
 }

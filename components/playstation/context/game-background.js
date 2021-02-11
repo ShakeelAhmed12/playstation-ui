@@ -2,7 +2,7 @@ import { createContext, useState } from 'react';
 
 export const BackgroundContext = createContext();
 
-export const BackgroundProvider = ({ children }) => {
+export const GameBackground = ({ children }) => {
     const [activeGame, setActiveGame] = useState('explore');
 
     return (

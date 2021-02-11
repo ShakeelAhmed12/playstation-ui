@@ -72,7 +72,7 @@ const StyledVideoWrapper = styled.div`
     }
 `;
 
-const VideoItem = ({ thumbnail, title, videoID }) => {
+const GameTrailerCards = ({ thumbnail, title, videoID }) => {
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
 
@@ -103,4 +103,4 @@ const VideoItem = ({ thumbnail, title, videoID }) => {
     )
 };
 
-export default VideoItem;
+export default GameTrailerCards;

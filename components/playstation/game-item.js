@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { BackgroundContext } from './context/background-context';
+import { BackgroundContext } from './context/game-background';
 import styled from 'styled-components';
 
 const GameImage = styled.div(({ gameImg }) => `

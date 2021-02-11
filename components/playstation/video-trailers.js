@@ -2,9 +2,9 @@ import { useContext } from 'react';
 import styled from 'styled-components';
 import VIDEOS from '../../configuration/videos';
 import GAMEUPDATES from '../../configuration/game-updates';
-import VideoItem from './video-item';
-import LatestNewsItem from './latest-news-items';
-import { BackgroundContext } from './context/background-context';
+import GameTrailerCards from './game-trailer-cards';
+import LatestNewsCards from './latest-news-cards';
+import { BackgroundContext } from './context/game-background';
 
 const StyledVideoTrailers = styled.section`
   white-space: nowrap;
@@ -41,11 +41,11 @@ const VideoTrailers = () => {
     <StyledVideoTrailers>
       { activeGame === 'explore' ? (
         VIDEOS.map((video, i) => (
-          <VideoItem key={i} thumbnail={video.thumbnail} title={video.title} videoID={video.videoID} />
+          <GameTrailerCards key={i} thumbnail={video.thumbnail} title={video.title} videoID={video.videoID} />
         ))
       ):(
         GAMEUPDATES[activeGame].map((update, i) => (
-          <LatestNewsItem key={i} date={update.patchRelease} title={update.title} articleLink={update.articleLink} />
+          <LatestNewsCards key={i} date={update.patchRelease} title={update.title} articleLink={update.articleLink} />
         ))
       )}
       

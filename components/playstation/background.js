@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import styled from 'styled-components';
-import { BackgroundContext } from './context/background-context';
+import { BackgroundContext } from './context/game-background';
 import BACKGROUNDS from '../../configuration/background';
 
 const StyledWrapper = styled.div(({ bgImage }) => `

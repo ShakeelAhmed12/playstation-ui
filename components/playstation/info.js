@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import styled from 'styled-components';
-import { BackgroundContext } from './context/background-context';
+import { BackgroundContext } from './context/game-background';
 import GAMEINFO from '../../configuration/game-info';
 
 const StyledInfo = styled.section`

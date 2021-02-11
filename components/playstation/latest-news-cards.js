@@ -35,7 +35,7 @@ const StyledCard = styled.a`
     }
 `;
 
-const LatestNewsItem = ({ date, title, articleLink,  }) => {
+const LatestNewsCards = ({ date, title, articleLink,  }) => {
     return(
         <StyledCard href={articleLink} target="_blank">
             <span>
@@ -51,4 +51,4 @@ const LatestNewsItem = ({ date, title, articleLink,  }) => {
     )
 };
 
-export default LatestNewsItem;
+export default LatestNewsCards;

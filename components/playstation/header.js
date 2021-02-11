@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { Modal, ModalHeader, ModalBody, Row, Col, Input } from 'reactstrap';
+import { Modal, ModalBody, ModalHeader, Row, Col, Input } from 'reactstrap';
 import SearchIcon from '../ui/icons/search';
 import SettingsIcon from '../ui/icons/settings';
 import Image from 'next/image';
@@ -206,6 +206,7 @@ const Header = () => {
         const minutes = date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes();
         setTime(`${hours}:${minutes}`);
 
+        // Using JS to detect window size and setting state based on if query matches condition
         if(window.matchMedia('(min-width: 992px)').matches){
           setDeviceMedia('desktop');
         }else{
