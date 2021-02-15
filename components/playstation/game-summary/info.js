@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import styled from 'styled-components';
-import { BackgroundContext } from './context/game-background';
-import GAMEINFO from '../../configuration/game-info';
+import { BackgroundContext } from '../context/game-background';
+import GAMEINFO from '../../../configuration/game-info';
 
 const StyledInfo = styled.section`
   margin-bottom: 3rem;

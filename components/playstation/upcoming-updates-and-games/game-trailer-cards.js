@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Modal } from 'reactstrap';
 import styled from 'styled-components';
 import Image from 'next/image';
-import PlayIcon from '../ui/icons/play';
+import PlayIcon from '../../ui/icons/play';
 
 const StyledVideoItem = styled.div`
     position: relative;

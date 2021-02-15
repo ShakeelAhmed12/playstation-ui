@@ -54,7 +54,6 @@ const BurgerMenu = () => {
 
     return (
         <>
-        {console.log(isOpen)}
         <StyledBurger open={isOpen} onClick={() => setOpen(!isOpen)}>
             <Image src="/playstation/profile.jpg" alt="User profile avatar" layout="responsive" width={60} height={60} />
         </StyledBurger>

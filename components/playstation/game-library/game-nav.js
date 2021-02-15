@@ -1,9 +1,9 @@
 import { useContext } from 'react';
 import styled from 'styled-components';
-import GAMES from '../../configuration/games';
-import GameItem from './game-item';
-import LocationIcon from '../ui/icons/location';
-import { BackgroundContext } from './context/game-background';
+import GAMES from '../../../configuration/games';
+import GameItem from './component/game-item';
+import LocationIcon from '../../ui/icons/location';
+import { BackgroundContext } from '../context/game-background';
 
 const StyleGameNav = styled.section(({ gameTitle }) => `
   position: relative;

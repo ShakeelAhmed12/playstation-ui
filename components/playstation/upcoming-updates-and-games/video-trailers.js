@@ -1,10 +1,10 @@
 import { useContext } from 'react';
 import styled from 'styled-components';
-import VIDEOS from '../../configuration/videos';
-import GAMEUPDATES from '../../configuration/game-updates';
+import VIDEOS from '../../../configuration/videos';
+import GAMEUPDATES from '../../../configuration/game-updates';
 import GameTrailerCards from './game-trailer-cards';
 import LatestNewsCards from './latest-news-cards';
-import { BackgroundContext } from './context/game-background';
+import { BackgroundContext } from '../context/game-background';
 
 const StyledVideoTrailers = styled.section`
   white-space: nowrap;

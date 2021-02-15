@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Modal, ModalBody, ModalHeader, Row, Col, Input } from 'reactstrap';
-import SearchIcon from '../ui/icons/search';
-import SettingsIcon from '../ui/icons/settings';
+import SearchIcon from '../../ui/icons/search';
+import SettingsIcon from '../../ui/icons/settings';
 import Image from 'next/image';
-import BurgerMenu from './nav/burger-menu';
-import ControllerIcon from '../ui/icons/controller';
+import BurgerMenu from './burger-menu';
+import ControllerIcon from '../../ui/icons/controller';
 
 const StyledHeader = styled.header`
   display: flex;
