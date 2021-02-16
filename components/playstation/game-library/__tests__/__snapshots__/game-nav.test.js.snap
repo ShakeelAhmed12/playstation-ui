@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<section
+  className="game-nav__StyleGameNav-r40yoh-0 idRwUJ"
+>
+  <div
+    className="game active"
+    onClick={[Function]}
+  >
+    <svg
+      height="56"
+      viewBox="0 0 24 24"
+      width="56"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0 0h24v24H0V0z"
+        fill="none"
+      />
+      <path
+        d="M21 3L3 10.53v.98l6.84 2.65L12.48 21h.98L21 3z"
+        fill="white"
+      />
+    </svg>
+  </div>
+  <div
+    className="game "
+  >
+    <div
+      className="game-item__GameImage-sc-11p7q2j-0 dNqegf"
+      onClick={[Function]}
+    />
+  </div>
+  <div
+    className="game "
+  >
+    <div
+      className="game-item__GameImage-sc-11p7q2j-0 gAIaqg"
+      onClick={[Function]}
+    />
+  </div>
+  <div
+    className="game "
+  >
+    <div
+      className="game-item__GameImage-sc-11p7q2j-0 gRCxuN"
+      onClick={[Function]}
+    />
+  </div>
+  <div
+    className="game "
+  >
+    <div
+      className="game-item__GameImage-sc-11p7q2j-0 eoAzkO"
+      onClick={[Function]}
+    />
+  </div>
+  <div
+    className="game "
+  >
+    <div
+      className="game-item__GameImage-sc-11p7q2j-0 hGUJoE"
+      onClick={[Function]}
+    />
+  </div>
+  <div
+    className="game "
+  >
+    <div
+      className="game-item__GameImage-sc-11p7q2j-0 ZeGRG"
+      onClick={[Function]}
+    />
+  </div>
+</section>
+`;

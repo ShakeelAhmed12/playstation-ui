@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <button
+    className="burger-menu__StyledBurger-sc-1vxenb0-1 fWAenI"
+    onClick={[Function]}
+    open={false}
+  >
+    <div
+      style={
+        Object {
+          "boxSizing": "border-box",
+          "display": "block",
+          "margin": 0,
+          "overflow": "hidden",
+          "position": "relative",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "boxSizing": "border-box",
+            "display": "block",
+            "paddingTop": "100%",
+          }
+        }
+      />
+      <img
+        alt="User profile avatar"
+        decoding="async"
+        src="/_next/image?url=%2Fplaystation%2Fprofile.jpg&w=1200&q=75"
+        srcSet="/_next/image?url=%2Fplaystation%2Fprofile.jpg&w=320&q=75 320w, /_next/image?url=%2Fplaystation%2Fprofile.jpg&w=420&q=75 420w, /_next/image?url=%2Fplaystation%2Fprofile.jpg&w=768&q=75 768w, /_next/image?url=%2Fplaystation%2Fprofile.jpg&w=1024&q=75 1024w, /_next/image?url=%2Fplaystation%2Fprofile.jpg&w=1200&q=75 1200w"
+        style={
+          Object {
+            "border": "none",
+            "bottom": 0,
+            "boxSizing": "border-box",
+            "display": "block",
+            "height": 0,
+            "left": 0,
+            "margin": "auto",
+            "maxHeight": "100%",
+            "maxWidth": "100%",
+            "minHeight": "100%",
+            "minWidth": "100%",
+            "padding": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "visibility": "visible",
+            "width": 0,
+          }
+        }
+      />
+    </div>
+  </button>,
+  <nav
+    className="burger-menu__StyledMenu-sc-1vxenb0-0 jvUneB"
+    open={false}
+  >
+    <a
+      className="active"
+      href="#"
+    >
+      Games
+    </a>
+    <a
+      href="#"
+    >
+      Media
+    </a>
+    <a
+      href="#"
+    >
+      Settings
+    </a>
+    <a
+      href="#"
+    >
+      Profile
+    </a>
+  </nav>,
+]
+`;
