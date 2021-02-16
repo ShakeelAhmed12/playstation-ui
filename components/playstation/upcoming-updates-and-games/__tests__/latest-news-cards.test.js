@@ -4,7 +4,7 @@ import { GameBackground } from '../../context/game-background';
 
 import LatestNewsCards from '../latest-news-cards';
 
-it('Check if Latest news cards renders correctly', () => {
+it('Latest news cards renders correctly', () => {
     const tree = renderer
         .create(
             <GameBackground>

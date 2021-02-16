@@ -4,7 +4,7 @@ import { GameBackground } from '../../context/game-background';
 
 import Header from '../header';
 
-it('renders correctly', () => {
+it('Header renders correctly', () => {
     const tree = renderer
         .create(
             <GameBackground>

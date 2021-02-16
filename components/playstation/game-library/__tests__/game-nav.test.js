@@ -4,7 +4,7 @@ import { GameBackground } from '../../context/game-background';
 
 import GameNav from '../game-nav';
 
-it('renders correctly', () => {
+it('Game nav renders correctly', () => {
     const tree = renderer
         .create(
             <GameBackground>

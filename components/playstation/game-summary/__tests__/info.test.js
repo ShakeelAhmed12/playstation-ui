@@ -4,7 +4,7 @@ import { GameBackground } from '../../context/game-background';
 
 import Info from '../info';
 
-it('renders correctly', () => {
+it('Game info renders correctly', () => {
     const tree = renderer
         .create(
             <GameBackground>

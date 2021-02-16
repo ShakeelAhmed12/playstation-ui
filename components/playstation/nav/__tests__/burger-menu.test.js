@@ -4,7 +4,7 @@ import { GameBackground } from '../../context/game-background';
 
 import BurgerMenu from '../burger-menu';
 
-it('renders correctly', () => {
+it('Burger menu renders correctly', () => {
     const tree = renderer
         .create(
             <GameBackground>
