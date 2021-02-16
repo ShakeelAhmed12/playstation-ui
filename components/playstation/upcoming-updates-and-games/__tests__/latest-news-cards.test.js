@@ -2,13 +2,13 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { GameBackground } from '../../context/game-background';
 
-import GameTrailerCards from '../game-trailer-cards';
+import LatestNewsCards from '../latest-news-cards';
 
-it('Trailer cards renders correctly', () => {
+it('Check if Latest news cards renders correctly', () => {
     const tree = renderer
         .create(
             <GameBackground>
-                <GameTrailerCards title="Grand Theft Auto 5" thumbnail="/playstation/video-thumbnails/gta-5.jpg" videoID="P20ASB1MdnI" />
+                <LatestNewsCards date="27/01/2021" title="News" articleLink="www.google.com" />
             </GameBackground>
         )
         .toJSON();
