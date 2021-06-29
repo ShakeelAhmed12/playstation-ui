@@ -38,7 +38,7 @@ const StyleGameNav = styled.section(({ gameTitle }) => `
     margin-right: 1rem;
     cursor: pointer;
     border: 0px solid #576170;
-    transition: all 0.15s ease-in-out;
+    transition: all 0.05s ease-in-out;
 
     &.explore{
       position: relative;
@@ -47,6 +47,15 @@ const StyleGameNav = styled.section(({ gameTitle }) => `
 
     &:hover{
       border: 2px solid #576170;
+    }
+
+    svg{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 100px;
+      margin: 0 auto;
     }
   }
 
@@ -71,6 +80,11 @@ const StyleGameNav = styled.section(({ gameTitle }) => `
       border: 0;
       transition: all 0.15s ease-in-out;
 
+      svg{
+        width: 50px;
+        height: 50px;
+      }
+
       &.explore{
         top: 0;
       }
@@ -82,6 +96,11 @@ const StyleGameNav = styled.section(({ gameTitle }) => `
         border: 2px solid #576170;
         position: relative;
         transition: all 0.15s ease-in-out;
+
+        svg{
+          width: 100px;
+          height: 100px;
+        }
       }
 
       &.active{

@@ -13,7 +13,7 @@ const GameImage = styled.div(({ gameImg }) => `
 const GameItem = ({ gameImg, title }) => {
     const { setActiveGame } = useContext(BackgroundContext);
     return(
-        <GameImage gameImg={gameImg} onClick={() => setActiveGame(title)} />
+        <GameImage id="background-wrapper" gameImg={gameImg} onClick={() => setActiveGame(title)} />
     )
 };
 

@@ -64,13 +64,19 @@ const Info = () => {
       ):(
           GAMEINFO[activeGame] && (
             <>
-              <img src={GAMEINFO[activeGame].logo} loading="lazy" alt={activeGame} />
-              <h1>
-                {GAMEINFO[activeGame].title}
-              </h1>
-              <p>
-                {GAMEINFO[activeGame].caption}
-              </p>
+              {GAMEINFO[activeGame].logo && (
+                <img src={GAMEINFO[activeGame].logo} loading="lazy" alt={activeGame} />
+              )}
+              {GAMEINFO[activeGame].title &&(
+                <h1>
+                  {GAMEINFO[activeGame].title}
+                </h1>
+              )}
+              {GAMEINFO[activeGame].caption && (
+                <p>
+                  {GAMEINFO[activeGame].caption}
+                </p>
+              )}
             </>
           )
       )}      

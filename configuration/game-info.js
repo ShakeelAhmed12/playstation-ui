@@ -9,9 +9,9 @@ const GAMEINFO = {
     },
     'AC: Valhalla': {
         logo: '/playstation/game-logo/ac-logo.png',
-        caption: 'Be Greater. Be Yourself.'
     },
     'Godfall': {
+        logo: '/playstation/game-logo/godfall-logo.png',
         title: 'Dominate the battlefield!',
         caption: 'Exploit weakpoints, slay with friends, and dominate the battlefield in Godfall using strategic combat!',
     },

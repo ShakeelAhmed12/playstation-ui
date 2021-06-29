@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import styled from 'styled-components';
 import { GameBackground } from '../components/playstation/context/game-background';
 import BackgroundWrapper from '../components/playstation/background';
@@ -11,8 +12,12 @@ const StyledContainer = styled.div`
   margin: 0 auto;
 `;
 
-export default function Home() {
-  return (
+const Homepage = () => (
+  <>
+    <Head>
+      <title>PS5 Dashboard</title>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    </Head>
     <GameBackground>
       <BackgroundWrapper>
         <Header />
@@ -23,5 +28,7 @@ export default function Home() {
         </StyledContainer>
       </BackgroundWrapper>
     </GameBackground>
-  )
-}
+  </>
+);
+
+export default Homepage;
