@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Game Item tests Game item renders correctly 1`] = `
+<div
+  className="game-item__GameImage-sc-11p7q2j-0 liplco"
+  id="background-wrapper"
+  onClick={[Function]}
+/>
+`;

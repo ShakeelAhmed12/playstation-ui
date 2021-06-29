@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`Header renders correctly 1`] = `
 <header
   className="header__StyledHeader-sc-7cu7g7-0 kxGCHO"
 >

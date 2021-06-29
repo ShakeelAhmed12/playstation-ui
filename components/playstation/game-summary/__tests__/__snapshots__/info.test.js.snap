@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`Game info renders correctly 1`] = `
 <section
   className="info__StyledInfo-sz20m9-0 kUWuGx"
 >

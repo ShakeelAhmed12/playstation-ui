@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`Game nav renders correctly 1`] = `
 <section
   className="game-nav__StyleGameNav-r40yoh-0 idRwUJ"
 >
@@ -29,6 +29,7 @@ exports[`renders correctly 1`] = `
   >
     <div
       className="game-item__GameImage-sc-11p7q2j-0 dNqegf"
+      id="background-wrapper"
       onClick={[Function]}
     />
   </div>
@@ -37,6 +38,7 @@ exports[`renders correctly 1`] = `
   >
     <div
       className="game-item__GameImage-sc-11p7q2j-0 gAIaqg"
+      id="background-wrapper"
       onClick={[Function]}
     />
   </div>
@@ -45,6 +47,7 @@ exports[`renders correctly 1`] = `
   >
     <div
       className="game-item__GameImage-sc-11p7q2j-0 gRCxuN"
+      id="background-wrapper"
       onClick={[Function]}
     />
   </div>
@@ -53,6 +56,7 @@ exports[`renders correctly 1`] = `
   >
     <div
       className="game-item__GameImage-sc-11p7q2j-0 eoAzkO"
+      id="background-wrapper"
       onClick={[Function]}
     />
   </div>
@@ -61,6 +65,7 @@ exports[`renders correctly 1`] = `
   >
     <div
       className="game-item__GameImage-sc-11p7q2j-0 hGUJoE"
+      id="background-wrapper"
       onClick={[Function]}
     />
   </div>
@@ -69,6 +74,7 @@ exports[`renders correctly 1`] = `
   >
     <div
       className="game-item__GameImage-sc-11p7q2j-0 ZeGRG"
+      id="background-wrapper"
       onClick={[Function]}
     />
   </div>

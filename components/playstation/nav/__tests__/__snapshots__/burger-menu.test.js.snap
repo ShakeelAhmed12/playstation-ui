@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`Burger menu renders correctly 1`] = `
 Array [
   <button
     className="burger-menu__StyledBurger-sc-1vxenb0-1 fWAenI"
