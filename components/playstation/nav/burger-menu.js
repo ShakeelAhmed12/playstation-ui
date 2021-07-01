@@ -8,7 +8,7 @@ const StyledMenu = styled.nav(({ open }) => `
     justify-content: center;
     background: rgba(0,0,0,0.65);
     backdrop-filter: blur(10px);
-    transform: ${open ? 'translateX(100%)' : 'translateX(0)'};
+    transform: ${open ? 'translateX(0)' : 'translateX(100%)'};
     height: 100vh;
     color: white;
     text-align: left;

@@ -206,14 +206,24 @@ const Header = () => {
         const minutes = date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes();
         setTime(`${hours}:${minutes}`);
 
-        // Using JS to detect window size and setting state based on if query matches condition
+        fetchFromApi('');
+    }, []);
+
+    useEffect(() => {
+      function detectViewport() {
         if(window.matchMedia('(min-width: 992px)').matches){
           setDeviceMedia('desktop');
         }else{
           setDeviceMedia('mobile');
         }
-        fetchFromApi('');
+      }
+
+      // Listener for window resize, if viewport is of mobile size update state to show appropriate component for viewport
+      window.addEventListener('resize', detectViewport);
+      detectViewport();
+      return () => window.removeEventListener('resize', detectViewport);
     }, []);
+
 
     async function fetchFromApi (query) {
       fetch(`https://api.rawg.io/api/games?key=${process.env.NEXT_PUBLIC_RAWG_KEY}&platforms=187,18&parent_platforms=2${query && `&search=${query}`}`, {
@@ -262,9 +272,9 @@ const Header = () => {
         ):(
           <>
             <StyledNav className="settings">
-            <span className="time">
-              {time}
-            </span>
+              <span className="time">
+                {time}
+              </span>
             </StyledNav>
             <BurgerMenu />
           </>
